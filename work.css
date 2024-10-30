@@ -1,0 +1,68 @@
+@import 'shared.css';
+
+/* Work & Experience Card Styling */
+.experience-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 30px 0;
+}
+
+.experience-card, .project-card {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Card Slider for Work */
+.image-card {
+    position: relative;
+    max-width: 400px; /* Constrain width of each slider */
+    height: 250px; /* Fixed height for all images */
+    margin: 15px auto; /* Center container */
+    overflow: hidden; /* Ensures no overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.work-image.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Slider Controls */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

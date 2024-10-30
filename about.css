@@ -1,0 +1,23 @@
+/* About Me Image Styling */
+#about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.about-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Slightly larger shadow on hover */
+}
