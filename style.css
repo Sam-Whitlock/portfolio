@@ -69,7 +69,7 @@ h2 {
     border-radius: 50%; /* Make the image circular */
     object-fit: cover;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     margin-bottom: 15px;
 }
 
@@ -107,25 +107,55 @@ h2 {
     text-align: center;
 }
 
-/* Image Styling */
+/* Image Styling for Consistency */
 .personal-image, .work-image {
     width: 100%;
     max-width: 400px;
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
-    margin-top: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: none;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+    transition: opacity 0.5s ease-in-out;
     cursor: pointer;
 }
 
-/* Show active image */
 .work-image.active, .personal-image.active {
     display: block;
     opacity: 1;
+}
+
+/* Slider Controls for Arrows */
+.image-card {
+    position: relative; /* Necessary for absolute positioning of arrows */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin-top: 15px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 /* Lightbox Overlay */
@@ -142,14 +172,12 @@ h2 {
     z-index: 1000;
 }
 
-/* Lightbox image styling */
 .lightbox-image {
     max-width: 90%;
     max-height: 90%;
     border-radius: 5px;
 }
 
-/* Close button for lightbox */
 .lightbox-close {
     position: absolute;
     top: 20px;
@@ -160,29 +188,6 @@ h2 {
     background: none;
     border: none;
     font-weight: bold;
-}
-
-/* Slider Controls */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: none;
-    padding: 5px;
-    border-radius: 50%;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
 }
 
 /* Footer */
