@@ -119,6 +119,16 @@ h2 {
     align-items: center;
     justify-content: center;
 }
+.work-image {
+    width: 100%;
+    max-width: 400px; /* Set a maximum width for consistency */
+    height: 250px; /* Fixed height to ensure uniformity */
+    object-fit: cover; /* Crop images to fit the specified dimensions */
+    border-radius: 5px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+}
 
 /* Uniform Image Size */
 .work-image, .personal-image {
