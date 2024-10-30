@@ -111,7 +111,7 @@ h2 {
 .image-card {
     position: relative;
     width: 100%;
-    max-width: 400px; /* Constrain width of each slider */
+    width: 400px; /* Constrain width of each slider */
     height: 250px; /* Fixed height for all images */
     margin: 15px auto; /* Center container */
     overflow: hidden; /* Ensures no overflow */
