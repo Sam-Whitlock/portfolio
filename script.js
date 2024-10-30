@@ -1,9 +1,10 @@
+// Initialize sliders for all sections
 function initSliders() {
     const sliders = document.querySelectorAll('.slider');
 
     sliders.forEach((slider) => {
         let slideIndex = 0;
-        const images = slider.querySelectorAll('.work-image');
+        const images = slider.querySelectorAll('.work-image, .personal-image');
 
         function showSlides() {
             images.forEach((img, index) => {
@@ -25,13 +26,13 @@ function initSliders() {
 
         slider.querySelector('.prev').onclick = () => changeSlide(-1);
         slider.querySelector('.next').onclick = () => changeSlide(1);
-        
+
         showSlides();
         setTimeout(autoSlide, 5000);
     });
 }
 
-// Lightbox functionality
+// Lightbox functionality for enlarging images on click
 document.addEventListener("DOMContentLoaded", () => {
     initSliders();
 
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(lightboxOverlay);
 
     // Open lightbox on image click
-    document.querySelectorAll('.work-image').forEach(img => {
+    document.querySelectorAll('.work-image, .personal-image').forEach(img => {
         img.onclick = () => {
             lightboxImage.src = img.src;
             lightboxOverlay.style.display = 'flex';
