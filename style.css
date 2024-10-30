@@ -108,34 +108,37 @@ h2 {
 }
 
 /* Image Styling for Consistency */
-.personal-image, .work-image {
+.image-card {
+    position: relative;
     width: 100%;
-    max-width: 400px;
-    height: 250px;
-    object-fit: cover;
+    max-width: 400px; /* Constrain width of each slider */
+    height: 250px; /* Fixed height for all images */
+    margin: 15px auto; /* Center container */
+    overflow: hidden; /* Ensures no overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Uniform Image Size */
+.work-image, .personal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images are cropped if needed to fit */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: none;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
     cursor: pointer;
 }
 
+/* Show active image */
 .work-image.active, .personal-image.active {
     display: block;
     opacity: 1;
 }
 
 /* Slider Controls for Arrows */
-.image-card {
-    position: relative; /* Necessary for absolute positioning of arrows */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 400px;
-    margin-top: 15px;
-}
-
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -157,7 +160,6 @@ h2 {
 .next {
     right: 10px;
 }
-
 /* Lightbox Overlay */
 .lightbox-overlay {
     position: fixed;
