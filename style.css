@@ -11,6 +11,7 @@ body {
     color: #333;
 }
 
+/* Header and Navigation */
 header {
     background-color: #333;
     color: #fff;
@@ -37,10 +38,11 @@ header nav ul li a {
     text-decoration: none;
 }
 
+/* General Section Styling */
 section {
     padding: 20px;
     margin: 20px auto;
-    max-width: 900px;
+    max-width: 1100px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,7 +54,47 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Card style for hobbies, personal projects, and engineering projects */
+/* About Me Image Styling */
+#about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+    margin-bottom: 15px;
+}
+
+.about-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Slightly larger shadow on hover */
+}
+
+/* Work & Experience Card Styling */
+.experience-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 30px 0;
+}
+
+.experience-card, .project-card {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Personal Section Cards */
 .hobby-card, .project-card {
     padding: 20px;
     margin: 20px 0;
@@ -65,8 +107,8 @@ h2 {
     text-align: center;
 }
 
-/* Image styling for personal section */
-.personal-image {
+/* Image Styling */
+.personal-image, .work-image {
     width: 100%;
     max-width: 400px;
     height: 250px;
@@ -74,9 +116,53 @@ h2 {
     border-radius: 10px;
     margin-top: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+    cursor: pointer;
 }
 
-/* Slider navigation buttons */
+/* Show active image */
+.work-image.active, .personal-image.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Lightbox Overlay */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Lightbox image styling */
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+/* Close button for lightbox */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+/* Slider Controls */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -99,6 +185,7 @@ h2 {
     right: 10px;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
@@ -113,4 +200,13 @@ footer a {
 
 footer a:hover {
     color: #ccc;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
