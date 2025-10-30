@@ -15,13 +15,22 @@
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.experience-card ul, .project-card ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
 
+.experience-card li, .project-card li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
 /* Image Card Slider for Work */
 .image-card {
     position: relative;
-    max-width: 400px; /* Constrain width of each slider */
-    height: 250px; /* Fixed height for all images */
-    margin: 15px auto; /* Center container */
+    max-width: 450px; /* Constrain width of each slider */
+    height: 300px; /* Fixed height for all images */
+    margin: 0px auto; /* Center container */
     overflow: hidden; /* Ensures no overflow */
     display: flex;
     align-items: center;
@@ -31,7 +40,7 @@
 .work-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
     display: none;
     opacity: 0;

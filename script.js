@@ -5,6 +5,15 @@ function initSliders() {
     sliders.forEach((slider) => {
         let slideIndex = 0;
         const images = slider.querySelectorAll('.work-image, .personal-image');
+        const prevBtn = slider.querySelector('.prev');
+        const nextBtn = slider.querySelector('.next');
+        const hasMultiple = images.length > 1;
+
+        // Hide buttons if only one image
+        if (!hasMultiple) {
+            if (prevBtn) prevBtn.style.display = 'none';
+            if (nextBtn) nextBtn.style.display = 'none';
+        }
 
         function showSlides() {
             images.forEach((img, index) => {
@@ -19,16 +28,11 @@ function initSliders() {
             showSlides();
         }
 
-        function autoSlide() {
-            changeSlide(1);
-            setTimeout(autoSlide, 5000); // 5 seconds between slides
-        }
 
         slider.querySelector('.prev').onclick = () => changeSlide(-1);
         slider.querySelector('.next').onclick = () => changeSlide(1);
 
         showSlides();
-        setTimeout(autoSlide, 5000);
     });
 }
 
