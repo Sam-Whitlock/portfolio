@@ -8,8 +8,8 @@
 }
 
 .about-image {
-    width: 720px;
-    height: 720px;
+    width: 360px;
+    height:360px;
     border-radius: 75%; /* Make the image circular */
     object-fit: cover;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
