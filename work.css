@@ -9,7 +9,7 @@
 }
 
 .experience-card, .project-card {
-    flex: 1;
+    flex: 2;
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 5px;

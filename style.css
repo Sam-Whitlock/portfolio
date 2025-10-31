@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Maven Pro', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -20,7 +20,7 @@ header {
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 header nav ul {
@@ -56,6 +56,10 @@ h2 {
 
 /* Footer */
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     padding: 10px;
     background-color: #333;
