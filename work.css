@@ -29,7 +29,7 @@
 .image-card {
     position: relative;
     max-width: 450px; /* Constrain width of each slider */
-    height: 300px; /* Fixed height for all images */
+    height: 261px; /* Fixed height for all images */
     margin: 0px auto; /* Center container */
     overflow: hidden; /* Ensures no overflow */
     display: flex;
@@ -74,4 +74,36 @@
 
 .next {
     right: 10px;
+}
+
+/* Lightbox Overlay */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: bold;
 }

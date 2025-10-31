@@ -16,8 +16,8 @@
 /* Image Card Slider for Personal Projects */
 .image-card {
     position: relative;
-    max-width: 400px; /* Constrain width of each slider */
-    height: 250px; /* Fixed height for all images */
+    max-width: 500px; /* Constrain width of each slider */
+    height: 500px; /* Fixed height for all images */
     margin: 15px auto;
     overflow: hidden;
     display: flex;
