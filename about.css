@@ -8,47 +8,45 @@
 }
 
 .about-image {
-    width: 500px;
-    height: 600px;
+    width: 375px;
+    height: 450px;
     object-fit: cover;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     margin-bottom: 15px;
 }
 
-.about-image:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Slightly larger shadow on hover */
+
+.logo-image {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 15px;
+    padding: 10px;
 }
 
-/* Lightbox Overlay */
-.lightbox-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+.flex-container {
+  display: flex; /* Makes the container a flex container */
+  justify-content: left; /* Distributes space evenly */
+  align-items: flex-start; /* Aligns items to the start of the cross-axis */
 }
 
-.lightbox-image {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 5px;
+.column-left {
+  padding: 10px;
+  margin: 5px;
+  flex:1;
 }
 
-.lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-weight: bold;
+.column-right {
+  padding: 10px;
+  margin: 5px;
+  flex:.25;
+}
+
+.about-blurb {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
 }
