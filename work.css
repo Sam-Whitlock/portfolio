@@ -1,30 +1,29 @@
-@import 'style.css';
-
 /* Work & Experience Card Styling */
 .experience-container {
     display: flex;
     gap: 30px;
     align-items: flex-start;
-    margin: 30px 0;
+    margin: 30px;
 }
 
-.experience-card, .project-card {
-    flex: 2;
+.experience-card {
+    flex: 1;
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.experience-card ul, .project-card ul {
+.experience-card ul {
     margin-top: 10px;
     padding-left: 20px;
     list-style-type: disc;
 }
 
-.experience-card li, .project-card li {
+.experience-card li {
     margin-bottom: 6px;
     line-height: 1.4;
 }
+
 /* Image Card Slider for Work */
 .image-card {
     position: relative;
@@ -35,6 +34,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
 .work-image {
@@ -107,3 +112,4 @@
     border: none;
     font-weight: bold;
 }
+
